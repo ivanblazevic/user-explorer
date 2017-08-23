@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="userExplorer">
     <head>
         <meta charset="utf-8">
         <title>UserExplorer</title>
@@ -9,8 +9,10 @@
 
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
+        <script type="text/javascript" src="app/app.js"></script>
+
     </head>
-    <body>
+    <body ng-controller="MainCtrl">
 
         <h1 class="text-center">User Explorer</h1>
 
@@ -27,7 +29,7 @@
             <div class="table-header">
                 <span>List of users</span>
                 <div class="search-wrapper">
-                    <input type="text" name="" value="" placeholder="Search...">
+                    <input type="text" name="" ng-model="searchText" placeholder="Search...">
                 </div>
                 <span class="new">
                     <i class="fa fa-plus-circle" aria-hidden="true"></i>
@@ -40,10 +42,10 @@
                     <th>Username</th>
                     <th>Date</th>
                 </tr>
-                <tr>
-                    <td>Maria Anders</td>
-                    <td>manders</td>
-                    <td>2017-08-12</td>
+                <tr ng-repeat="user in users | search:searchText">
+                    <td>{{ user.title }}</td>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.date }}</td>
                 </tr>
             </table>
 

@@ -71,7 +71,15 @@ nav {
 
 body {
   margin: 0;
-  font-family: "San Francisco"; }
+  font-family: "San Francisco";
+  color: #464646; }
+
+input {
+  padding: 6px 18px;
+  font-size: 18px;
+  font-weight: 100;
+  border-radius: 4px;
+  border: 1px solid #e5e5e5; }
 
 .table-wrapper {
   padding: 20px 50px; }
@@ -87,11 +95,5 @@ body {
     width: 100%;
     display: block;
     text-align: center; }
-    .table-header .search-wrapper input {
-      padding: 6px 18px;
-      font-size: 18px;
-      font-weight: 100;
-      border-radius: 4px;
-      border: 1px solid #e5e5e5; }
 
 /*# sourceMappingURL=main.css.map */
