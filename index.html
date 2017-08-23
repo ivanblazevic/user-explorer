@@ -4,28 +4,39 @@
         <meta charset="utf-8">
         <title>UserExplorer</title>
 
-        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
 
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
     </head>
     <body>
 
-        <h1 class="title">User Explorer</h1>
+        <h1 class="text-center">User Explorer</h1>
 
         <nav>
             <ul>
                 <li>
-                    <a href="default.asp">Users</a>
+                    <a href="#">Users</a>
                 </li>
             </ul>
         </nav>
 
         <div class="table-wrapper">
 
+            <div class="table-header">
+                <span>List of users</span>
+                <div class="search-wrapper">
+                    <input type="text" name="" value="" placeholder="Search...">
+                </div>
+                <span class="new">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                </span>
+            </div>
+
             <table>
                 <tr>
-                    <th>Title</th>
+                    <th>Title<i style="vertical-align: top;margin-left: 4px;" class="fa fa-sort-desc" aria-hidden="true"></i></th>
                     <th>Username</th>
                     <th>Date</th>
                 </tr>

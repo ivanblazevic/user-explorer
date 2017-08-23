@@ -1,7 +1,12 @@
-/**
- * http://applemusic.tumblr.com/
- * https://jsfiddle.net/xq56dmrh/
- */
+.text-left {
+  text-align: left; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
 /** Ultra Light */
 @font-face {
   font-family: "San Francisco";
@@ -32,48 +37,6 @@
   font-family: "San Francisco";
   font-weight: 700;
   src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff"); }
-body {
-  margin: 0;
-  font-family: "San Francisco"; }
-
-nav {
-  background-color: #f5f5f5;
-  border: 0;
-  border-top: 1px solid #e5e5e5;
-  border-bottom: 1px solid #e5e5e5; }
-
-nav li {
-  list-style: none; }
-
-nav li a {
-  font-size: 22px;
-  text-decoration: none; }
-
-nav li a {
-  color: #4c4c4c; }
-
-.table-wrapper {
-  padding: 50px; }
-
-table {
-  font-size: 22px;
-  width: 100%;
-  border-spacing: 0; }
-
-table tr {
-  text-align: left;
-  user-select: none; }
-
-table th {
-  font-weight: 500;
-  background-color: #f7f7f7;
-  border-bottom: 1px solid #e5e5e5;
-  user-select: none; }
-
-table th, td {
-  padding: 10px;
-  border-bottom: 1px solid #e5e5e5; }
-
 table {
   font-size: 22px;
   width: 100%;
@@ -88,7 +51,8 @@ table {
     font-weight: 500;
     background-color: #f7f7f7;
     border-bottom: 1px solid #e5e5e5;
-    user-select: none; }
+    user-select: none;
+    cursor: pointer; }
 
 nav {
   background-color: #f5f5f5;
@@ -100,16 +64,34 @@ nav {
     nav li a {
       font-size: 22px;
       text-decoration: none;
-      color: #4c4c4c; }
+      color: #4c4c4c;
+      padding: 16px 24px;
+      border-bottom: 1px solid #847575;
+      margin-bottom: -1px; }
 
 body {
   margin: 0;
   font-family: "San Francisco"; }
 
-.title {
-  text-align: center; }
-
 .table-wrapper {
-  padding: 50px; }
+  padding: 20px 50px; }
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  padding: 20px 0px;
+  position: relative; }
+  .table-header .search-wrapper {
+    position: absolute;
+    width: 100%;
+    display: block;
+    text-align: center; }
+    .table-header .search-wrapper input {
+      padding: 6px 18px;
+      font-size: 18px;
+      font-weight: 100;
+      border-radius: 4px;
+      border: 1px solid #e5e5e5; }
 
 /*# sourceMappingURL=main.css.map */
