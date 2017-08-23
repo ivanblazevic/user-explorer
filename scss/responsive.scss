@@ -6,7 +6,15 @@
     }
 
     .table-header-text {
-        visibility: collapse;
+        display: none;
+    }
+
+    .table-header {
+
+        .search-wrapper {
+            position: relative;
+        }
+
     }
 
 }
