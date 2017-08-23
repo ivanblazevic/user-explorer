@@ -1,0 +1,16 @@
+@import "fonts";
+@import "table";
+@import "navigation";
+
+body {
+    margin: 0;
+    font-family: "San Francisco";
+}
+
+.title {
+    text-align: center;
+}
+
+.table-wrapper {
+    padding: 50px;
+}
