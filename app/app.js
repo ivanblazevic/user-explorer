@@ -21,12 +21,12 @@ app.controller("MainCtrl", function($scope) {
         {
             title: "Jayce Carter",
             username: "jcarter",
-            date: "2017-03-20"
+            date: "2017-01-20"
         },
         {
             title: "Montana Merton",
             username: "mmerton",
-            date: "2017-05-09"
+            date: "2017-11-09"
         }
     ];
 

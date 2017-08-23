@@ -7,7 +7,7 @@ app.directive("sort", function() {
         template:
         '<a ng-click="onClick()">'+
             '<span ng-transclude></span>'+
-            '<i class="fa" ng-class="{ \'fa-chevron-down\': order === by && !reverse, \'fa-chevron-up\': order === by && reverse }" aria-hidden="true"></i>'+
+            '<i class="fa" ng-class="{ \'fa-chevron-up\': order === by && !reverse, \'fa-chevron-down\': order === by && reverse }" aria-hidden="true"></i>'+
         '</a>',
         scope: {
             order: '=',

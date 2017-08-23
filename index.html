@@ -3,12 +3,13 @@
     <head>
         <meta charset="utf-8">
         <title>UserExplorer</title>
-
+        
+        <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="css/main.css">
 
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-
+        <!-- JavaScript -->
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
         <script type="text/javascript" src="app/app.js"></script>
         <script type="text/javascript" src="app/filters/search.js"></script>
         <script type="text/javascript" src="app/directives/sort.js"></script>
@@ -29,28 +30,30 @@
         <div class="table-wrapper">
 
             <div class="table-header">
-                <span>List of users</span>
+                <span class="table-header-text">List of users</span>
                 <div class="search-wrapper">
-                    <input type="text" name="" ng-model="searchText" placeholder="Search...">
+                    <input type="text" ng-model="searchText" placeholder="Search...">
                 </div>
-                <span class="new">
-                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                </span>
             </div>
 
-            <th-sortable></th-sortable>
-
             <table>
-                <tr>
-                    <th sort by="order" reverse="reverse" order="'title'">Title</th>
-                    <th sort by="order" reverse="reverse" order="'username'">Username</th>
-                    <th sort by="order" reverse="reverse" order="'date'">Date</th>
-                </tr>
-                <tr ng-repeat="user in users | search:searchText:['title','username','date'] | orderBy:order:reverse">
-                    <td>{{ user.title }}</td>
-                    <td>{{ user.username }}</td>
-                    <td>{{ user.date }}</td>
-                </tr>
+                <thead>
+                    <th width="33%" sort by="order" reverse="reverse" order="'title'">Title</th>
+                    <th width="33%" sort by="order" reverse="reverse" order="'username'">Username</th>
+                    <th width="33%" sort by="order" reverse="reverse" order="'date'">Date</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="user in users | search:searchText:['title','username','date'] | orderBy:order:reverse as results">
+                        <td>{{ user.title }}</td>
+                        <td>{{ user.username }}</td>
+                        <td>{{ user.date }}</td>
+                    </tr>
+                    <tr>
+                        <td class="no-results" colspan="3" ng-show="results.length == 0">
+                            No users matched the search "{{searchText}}"
+                        </td>
+                    </tr>
+                </tbody>
             </table>
 
         </div>
