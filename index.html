@@ -10,6 +10,8 @@
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
         <script type="text/javascript" src="app/app.js"></script>
+        <script type="text/javascript" src="app/filters/search.js"></script>
+        <script type="text/javascript" src="app/directives/sort.js"></script>
 
     </head>
     <body ng-controller="MainCtrl">
@@ -36,13 +38,15 @@
                 </span>
             </div>
 
+            <th-sortable></th-sortable>
+
             <table>
                 <tr>
-                    <th>Title<i style="vertical-align: top;margin-left: 4px;" class="fa fa-sort-desc" aria-hidden="true"></i></th>
-                    <th>Username</th>
-                    <th>Date</th>
+                    <th sort by="order" reverse="reverse" order="'title'">Title</th>
+                    <th sort by="order" reverse="reverse" order="'username'">Username</th>
+                    <th sort by="order" reverse="reverse" order="'date'">Date</th>
                 </tr>
-                <tr ng-repeat="user in users | search:searchText">
+                <tr ng-repeat="user in users | search:searchText:['title','username','date'] | orderBy:order:reverse">
                     <td>{{ user.title }}</td>
                     <td>{{ user.username }}</td>
                     <td>{{ user.date }}</td>

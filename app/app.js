@@ -30,17 +30,7 @@ app.controller("MainCtrl", function($scope) {
         }
     ];
 
-});
+    $scope.order;
+    $scope.reverse = false;
 
-app.filter('search', function() {
-    return function(list, query) {
-        if (!query) return list;
-        return list.filter(function(item) {
-            return !!(
-                item.title.toLowerCase().indexOf(query.toLowerCase() || '') !== -1 ||
-                item.username.toLowerCase().indexOf(query.toLowerCase() || '') !== -1 ||
-                item.date.toLowerCase().indexOf(query.toLowerCase() || '') !== -1
-            );
-        });
-    }
 });

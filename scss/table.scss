@@ -20,6 +20,22 @@ table {
         border-bottom: 1px solid #e5e5e5;
         user-select: none;
         cursor: pointer;
+
+        i.fa {
+            font-size: 16px;
+            margin-left: 4px;
+            line-height: 12px;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            vertical-align: middle;
+        }
+    }
+
+    th:hover {
+        .fa {
+            color: #1082f7;
+        }
     }
 
 }

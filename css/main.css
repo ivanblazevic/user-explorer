@@ -53,6 +53,16 @@ table {
     border-bottom: 1px solid #e5e5e5;
     user-select: none;
     cursor: pointer; }
+    table th i.fa {
+      font-size: 16px;
+      margin-left: 4px;
+      line-height: 12px;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      vertical-align: middle; }
+  table th:hover .fa {
+    color: #1082f7; }
 
 nav {
   background-color: #f5f5f5;
