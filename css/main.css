@@ -12,18 +12,17 @@ input {
 
 .table-wrapper {
   padding: 20px 50px; }
-
-.table-header {
-  display: flex;
-  justify-content: space-between;
-  font-size: 24px;
-  padding: 20px 0px;
-  position: relative; }
-  .table-header .search-wrapper {
-    position: absolute;
-    width: 100%;
-    display: block;
-    text-align: center; }
+  .table-wrapper .table-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    padding: 20px 0px;
+    position: relative; }
+    .table-wrapper .table-header-wrapper .search-wrapper {
+      position: absolute;
+      width: 100%;
+      display: block;
+      text-align: center; }
 
 .text-center {
   text-align: center; }
@@ -89,7 +88,7 @@ nav {
     nav li a {
       font-size: 22px;
       text-decoration: none;
-      color: #4c4c4c;
+      color: #847575;
       padding: 16px 24px;
       border-bottom: 1px solid #847575;
       margin-bottom: -1px; }
@@ -98,11 +97,9 @@ nav {
 @media only screen and (max-width: 768px) {
   .table-wrapper {
     padding: 20px 10px; }
-
-  .table-header-text {
-    display: none; }
-
-  .table-header .search-wrapper {
-    position: relative; } }
+    .table-wrapper .table-header-wrapper .table-header-text {
+      display: none; }
+    .table-wrapper .table-header-wrapper .search-wrapper {
+      position: relative; } }
 
 /*# sourceMappingURL=main.css.map */

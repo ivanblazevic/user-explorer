@@ -1,0 +1,40 @@
+table
+    font-size: 22px
+    width: 100%
+    border-spacing: 0
+
+    th,td
+        border-bottom: border($border-color)
+
+    tr
+        text-align: left
+        user-select: none
+
+    th
+        padding: 10px 16px
+        font-weight: 500
+        background-color: $table-header
+        border-bottom: border($border-color)
+        user-select: none
+        cursor: pointer
+
+        i.fa
+            font-size: 16px
+            margin-left: 4px
+            line-height: 14px
+            width: 20px
+            height: 20px
+            text-align: center
+            vertical-align: middle
+
+        &:hover
+            .fa
+                color: $link-hover
+
+    td
+        padding: 16px
+
+        &.no-results
+            padding: 100px
+            border-bottom: 0
+            text-align: center
